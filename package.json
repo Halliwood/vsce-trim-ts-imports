@@ -2,7 +2,7 @@
 	"name": "vsce-trim-ts-imports",
 	"displayName": "trim-ts-imports",
 	"description": "A tool to trim import statements for typescript.",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"publisher": "teppei-sz",
 	"engines": {
 		"vscode": "^1.54.0"
