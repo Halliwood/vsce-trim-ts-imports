@@ -1,7 +1,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
-import trimer from 'trim-ts-imports'
+import { ImportTrimer } from 'trim-ts-imports/bin/ImportTrimer';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -19,7 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 		let fileContent = vscode.window.activeTextEditor?.document.getText(undefined);
 		if(fileContent) {			
-			trimer.trim(fileContent).then(newContent => {
+			(new ImportTrimer).trim(fileContent).then(newContent => {
 				if(newContent != fileContent && vscode.window.activeTextEditor) {
 					const end = new vscode.Position(vscode.window.activeTextEditor.document.lineCount + 1, 0);
 					vscode.window.activeTextEditor?.edit(editBuilder => {
