@@ -16,9 +16,13 @@ Sometimes this extension may not work fine when the Typescript code contains som
 
 ## Release Notes
 
-### 1.0.0
+### 0.0.1
 
 Initial release of trim-ts-imports.
+
+### 0.0.2
+
+Fix bugs.
 
 -----------------------------------------------------------------------------------------------------------
 
